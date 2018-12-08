@@ -1,16 +1,19 @@
 meta(charset="utf-8")
-meta(name="X-UA-Compatible", content="IE=edge")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1")
+meta(name="theme-color" content="#4fc08d")
+meta(http-equiv="Cache-Control" content="no-transform")
+meta(http-equiv="Cache-Control" content="no-siteapp")
 
-title 
+title
     block site_title
         = config.title
 block description
     meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
-
-meta(name="viewport", content="width=device-width, initial-scale=1")
 link(rel="icon", href=url_for(theme.favicon))
-link(rel="stylesheet", href=url_for("css/apollo.css"))
+link(rel="stylesheet", type="text/css", href="//fonts.loli.net/css?family=Source+Sans+Pro:300,400,600|Roboto Mono")
+link(rel="stylesheet", href=url_for("scss/apollo.css"))
 
 - var xml = config.url + '/atom.xml'
-    link(rel="search", type="application/opensearchdescription+xml", href=xml, title=config.title)
+link(rel="search", type="application/opensearchdescription+xml", href=xml, title=config.title)
     
